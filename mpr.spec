@@ -1,4 +1,4 @@
-# $Revision: 1.12 $Date: 2003-05-25 05:50:50 $
+# $Revision: 1.13 $Date: 2003-05-28 12:59:48 $
 Summary:	Poor man's memory profile
 Summary(pl):	Profiler pamiêci dla ubogich
 Name:		mpr
@@ -7,6 +7,7 @@ Release:	1
 License:	distributable
 Group:		Development/Debuggers
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
+# Source0-md5:	40c6932c3806eace84fff2a53740ca54
 Requires:	gdb, gcc, binutils
 ExclusiveArch:	%{ix86}
 ExclusiveOs:	Linux
