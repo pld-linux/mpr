@@ -1,4 +1,4 @@
-# $Revision: 1.2 $Date: 1999-10-14 21:48:40 $
+# $Revision: 1.3 $Date: 2000-03-28 16:54:42 $
 Summary:	Poor man's memory profile
 Name:		mpr
 Version:	1.9
