@@ -1,4 +1,4 @@
-# $Revision: 1.10 $Date: 2002-02-22 23:29:17 $
+# $Revision: 1.11 $Date: 2002-11-27 22:06:23 $
 Summary:	Poor man's memory profile
 Summary(pl):	Profiler pamiêci dla ubogich
 Name:		mpr
@@ -42,13 +42,11 @@ install {mpr,mprcc,mprfl,mprhi,mprlk,mprmap,mprsz,mprpc,mprnm,mprdem} \
 	$RPM_BUILD_ROOT%{_bindir}
 install libmpr.a $RPM_BUILD_ROOT%{_libdir}
 
-gzip -9nf README DOC FAQ BUGS LOG LICENSE README.PERL README.SLOW
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README DOC FAQ BUGS LOG LICENSE README.PERL README.SLOW
 %{_libdir}/*
 %attr(755,root,root) %{_bindir}/*
