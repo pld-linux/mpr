@@ -1,13 +1,13 @@
-# $Revision: 1.14 $Date: 2003-09-09 11:05:25 $
+# $Revision: 1.15 $Date: 2003-11-03 01:03:42 $
 Summary:	Poor man's memory profile
 Summary(pl):	Profiler pamiêci dla ubogich
 Name:		mpr
-Version:	1.9
+Version:	2.5
 Release:	1
 License:	distributable
 Group:		Development/Debuggers
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
-# Source0-md5:	40c6932c3806eace84fff2a53740ca54
+# Source0-md5:	76a0d9fb4a74f07c5cf6ec8c40bc784a
 Requires:	gawk
 Requires:	gdb
 ExclusiveArch:	%{ix86}
@@ -30,24 +30,26 @@ programu przeprowadza postprocessing tego pliku.
 
 %prep
 %setup -q
-./configure x86-linux
 
 %build
-%{__make} CCFLAGS="%{rpmcflags}"
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}}
 
-install {mpr,mprcc,mprfl,mprhi,mprlk,mprmap,mprsz,mprpc,mprnm,mprdem} \
-	$RPM_BUILD_ROOT%{_bindir}
-install libmpr.a $RPM_BUILD_ROOT%{_libdir}
+%{__make} install \
+	BINDIR=$RPM_BUILD_ROOT%{_bindir} \
+	LIBDIR=$RPM_BUILD_ROOT%{_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README DOC FAQ BUGS LOG LICENSE README.PERL README.SLOW
-%{_libdir}/*
+%doc doc/*.html BUGS FAQ LOG README
+%{_libdir}/*.a
+%attr(755,root,root) %{_libdir}/*.so
 %attr(755,root,root) %{_bindir}/*
