@@ -1,10 +1,11 @@
-# $Revision: 1.6 $Date: 2000-06-09 07:23:26 $
+# $Revision: 1.7 $Date: 2001-05-02 21:51:24 $
 Summary:	Poor man's memory profile
 Name:		mpr
 Version:	1.9
 Release:	1
 Copyright:	distributable
 Group:		Development/Debuggers
+Group(de):	Entwicklung/Debugger
 Group(pl):	Programowanie/Odpluskwiacze
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 Requires:	gdb, gcc, binutils
@@ -25,7 +26,7 @@ file once the program has terminated.
 ./configure x86-linux
 
 %build
-%{__make} CCFLAGS="$RPM_OPT_FLAGS"
+%{__make} CCFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -34,8 +35,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}}
 install {mpr,mprcc,mprfl,mprhi,mprlk,mprmap,mprsz,mprpc,mprnm,mprdem} \
 	$RPM_BUILD_ROOT%{_bindir}
 install libmpr.a $RPM_BUILD_ROOT%{_libdir}
-
-strip $RPM_BUILD_ROOT%{_bindir}/mprdem
 
 gzip -9nf README DOC FAQ BUGS LOG LICENSE README.PERL README.SLOW
 
