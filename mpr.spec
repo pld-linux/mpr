@@ -1,4 +1,4 @@
-# $Revision: 1.5 $Date: 2000-06-07 03:33:09 $
+# $Revision: 1.6 $Date: 2000-06-09 07:23:26 $
 Summary:	Poor man's memory profile
 Name:		mpr
 Version:	1.9
@@ -25,7 +25,7 @@ file once the program has terminated.
 ./configure x86-linux
 
 %build
-make CCFLAGS="$RPM_OPT_FLAGS"
+%{__make} CCFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
