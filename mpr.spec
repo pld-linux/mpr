@@ -1,15 +1,16 @@
-# $Revision: 1.7 $Date: 2001-05-02 21:51:24 $
+# $Revision: 1.8 $Date: 2001-11-22 15:24:33 $
 Summary:	Poor man's memory profile
+Summary(pl):	Profiler pamiêci dla ubogich
 Name:		mpr
 Version:	1.9
 Release:	1
-Copyright:	distributable
+License:	distributable
 Group:		Development/Debuggers
 Group(de):	Entwicklung/Debugger
 Group(pl):	Programowanie/Odpluskwiacze
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 Requires:	gdb, gcc, binutils
-ExclusiveArch:	%ix86
+ExclusiveArch:	%{ix86}
 ExclusiveOs:	Linux
 Requires:	gawk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,6 +21,13 @@ allocation statistics and patterns - it does not find memory
 corruption errors. It uses a simple, brute force strategy - log all
 memory alloc/free requests to a file and then post-process this log
 file once the program has terminated.
+
+%description -l pl
+mpr mo¿e byæ u¿ywany do szukania wycieków pamiêci przy malloc/realloc
+oraz okre¶lania statystych alokacji pamiêci - nie szuka b³êdów
+naruszenia pamiêci. U¿ywa prostej strategii brute-force - loguje
+wszystkie zlecenia alokacji/zwolnienia do pliku, a po zakoñczeniu
+programu przeprowadza postprocessing tego pliku.
 
 %prep
 %setup -q
