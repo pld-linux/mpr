@@ -1,4 +1,4 @@
-# $Revision: 1.3 $Date: 2000-03-28 16:54:42 $
+# $Revision: 1.4 $Date: 2000-04-01 11:14:54 $
 Summary:	Poor man's memory profile
 Name:		mpr
 Version:	1.9
@@ -11,14 +11,13 @@ Requires:	gdb, gcc, binutils
 ExclusiveArch:	%ix86
 ExclusiveOs:	Linux
 Requires:	gawk
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 mpr can be used to find malloc/realloc memory leaks and memory allocation
 statistics and patterns - it does not find memory corruption errors. It uses
 a simple, brute force strategy - log all memory alloc/free requests to a
 file and then post-process this log file once the program has terminated.
-
 
 %prep
 %setup -q
