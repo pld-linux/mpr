@@ -1,4 +1,4 @@
-# $Revision: 1.16 $Date: 2004-01-29 22:28:56 $
+# $Revision: 1.17 $Date: 2004-10-24 12:14:38 $
 Summary:	Poor man's memory profile
 Summary(pl):	Profiler pamiêci dla ubogich
 Name:		mpr
@@ -23,7 +23,7 @@ file once the program has terminated.
 
 %description -l pl
 mpr mo¿e byæ u¿ywany do szukania wycieków pamiêci przy malloc/realloc
-oraz okre¶lania statystych alokacji pamiêci - nie szuka b³êdów
+oraz okre¶lania statystyk alokacji pamiêci - nie szuka b³êdów
 naruszenia pamiêci. U¿ywa prostej strategii brute-force - loguje
 wszystkie zlecenia alokacji/zwolnienia do pliku, a po zakoñczeniu
 programu przeprowadza postprocessing tego pliku.
