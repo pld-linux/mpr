@@ -1,6 +1,6 @@
-# $Revision: 1.18 $Date: 2005-07-24 12:34:38 $
+# $Revision: 1.19 $Date: 2007-02-12 00:49:08 $
 Summary:	Poor man's memory profile
-Summary(pl):	Profiler pamiêci dla ubogich
+Summary(pl.UTF-8):   Profiler pamiÄ™ci dla ubogich
 Name:		mpr
 Version:	2.8
 Release:	1
@@ -21,11 +21,11 @@ corruption errors. It uses a simple, brute force strategy - log all
 memory alloc/free requests to a file and then post-process this log
 file once the program has terminated.
 
-%description -l pl
-mpr mo¿e byæ u¿ywany do szukania wycieków pamiêci przy malloc/realloc
-oraz okre¶lania statystyk alokacji pamiêci - nie szuka b³êdów
-naruszenia pamiêci. U¿ywa prostej strategii brute-force - loguje
-wszystkie zlecenia alokacji/zwolnienia do pliku, a po zakoñczeniu
+%description -l pl.UTF-8
+mpr moÅ¼e byÄ‡ uÅ¼ywany do szukania wyciekÃ³w pamiÄ™ci przy malloc/realloc
+oraz okreÅ›lania statystyk alokacji pamiÄ™ci - nie szuka bÅ‚Ä™dÃ³w
+naruszenia pamiÄ™ci. UÅ¼ywa prostej strategii brute-force - loguje
+wszystkie zlecenia alokacji/zwolnienia do pliku, a po zakoÅ„czeniu
 programu przeprowadza postprocessing tego pliku.
 
 %prep
