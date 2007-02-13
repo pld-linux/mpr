@@ -1,6 +1,6 @@
-# $Revision: 1.19 $Date: 2007-02-12 00:49:08 $
+# $Revision: 1.20 $Date: 2007-02-13 07:16:48 $
 Summary:	Poor man's memory profile
-Summary(pl.UTF-8):   Profiler pamięci dla ubogich
+Summary(pl.UTF-8):	Profiler pamięci dla ubogich
 Name:		mpr
 Version:	2.8
 Release:	1
